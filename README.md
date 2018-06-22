@@ -20,11 +20,11 @@
 4. 导入migration
   * 导入rbac migration 权限控制数据表
     ```
-    php yii migrate --migrationPath=@yii/rbac/migrations
+    yii migrate --migrationPath=@yii/rbac/migrations
     ```
   *  导入用户表数据
      ```
-     php yii migrate 
+     yii migrate
      ```
 DIRECTORY STRUCTURE
 -------------------
