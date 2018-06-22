@@ -1,25 +1,26 @@
-<p align="center">
-    <a href="https://github.com/yiisoft" target="_blank">
-        <img src="https://avatars0.githubusercontent.com/u/993323" height="100px">
-    </a>
-    <h1 align="center">Yii 2 Advanced Project Template</h1>
-    <br>
-</p>
+### 简介
+一个简单的yii2高级版例子
+#### 特点
+* 集成了RBAC权限管理
+* 用到了module实现api restful
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+### 安装
+1. git clone https://github.com/chenlovexx/yii2-app-advanced/
+   
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+2. 执行该目录下的 init 初始化配置（生成本地配置文件）
+   init 
+   
+3. 配置好数据库配置后
+   修改common/config/main-local.php里的数据库信息
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
-
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
-
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-advanced.svg)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Build Status](https://travis-ci.org/yiisoft/yii2-app-advanced.svg?branch=master)](https://travis-ci.org/yiisoft/yii2-app-advanced)
+4. 导入migration
+* 导入rbac migration 权限控制数据表
+    ```
+    php yii migrate --migrationPath=@yii/rbac/migrations
+    ``` 
+*  导入用户表数据
+     php yii migrate 
 
 DIRECTORY STRUCTURE
 -------------------
