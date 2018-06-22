@@ -1,5 +1,5 @@
 ### 简介
-一个简单的yii2高级版例子
+一个简单的yii2高级版例子，包含frontend,backend,api 三个应用，每个应用都是独立的应用，共用同一个common\models\User identity Class
 #### 特点
 * 集成了RBAC权限管理
 * 用到了module实现api restful
@@ -26,6 +26,36 @@
      ```
      yii migrate
      ```
+### 配置三个应用的访问域名
+1. 修改hosts文件添加frontend, backend和api三个域名
+   ```
+   127.0.0.1 frontend.test backend.test api.test
+   ```
+2. 修改apache vhost 
+```   
+<VirtualHost *:80>
+    ServerName frontend.test
+    DocumentRoot "path to yii2-app-advanced/frontend/web"
+    ErrorLog "logs/frontend-error.log"
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName backend.test
+    DocumentRoot "path to yii2-app-advanced/backend/web"
+    ErrorLog "logs/backend-error.log"
+</VirtualHost>
+
+<VirtualHost *:80>
+    ServerName api.test
+    DocumentRoot "path to yii2-app-advanced/api/web"
+    ErrorLog "logs/api-error.log"
+</VirtualHost>
+```
+
+然后可以以frontend.test / backend.test / api.test 访问三个应用
+
+测试api可以用Google的postman插件来测试
+
 DIRECTORY STRUCTURE
 -------------------
 
