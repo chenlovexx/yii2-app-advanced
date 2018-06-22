@@ -5,13 +5,15 @@
 * 用到了module实现api restful
 
 ### 安装
-1. git clone https://github.com/chenlovexx/yii2-app-advanced/
-   
+1. 克隆下来
+   ```
+   git clone https://github.com/chenlovexx/yii2-app-advanced/
+   ``` 
 
 2. 执行该目录下的 init 初始化配置（生成本地配置文件）
-   
+   ```
    init 
-   
+   ``` 
 3. 配置好数据库配置后
    修改common/config/main-local.php里的数据库信息
 
@@ -19,10 +21,11 @@
   * 导入rbac migration 权限控制数据表
     ```
     php yii migrate --migrationPath=@yii/rbac/migrations
-    ``` 
+    ```
   *  导入用户表数据
+     ```
      php yii migrate 
-
+     ```
 DIRECTORY STRUCTURE
 -------------------
 
