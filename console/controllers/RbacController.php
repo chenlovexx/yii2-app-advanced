@@ -88,6 +88,5 @@ class RbacController extends Controller
         $auth->assign($admin, 1);
     }
 }
- $model->data = 'O:'.strlen($rule_path).':"'$rule_path'":3:{s:4:"name";s:'.strlen($modle->name).':"'.$model->name.'";s:9:"createdAt";i:'.$current_time.';s:9:"updatedAt";i:'.$current_time.';}';
  
  
